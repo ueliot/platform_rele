@@ -74,7 +74,7 @@ https://www.youtube.com/watch?v=WjddCoWTqi8   //Entorno virtual
 https://code.visualstudio.com/docs/editor/variables-reference 
 
 You can also reference environment variables through the ${env:Name} syntax (for example, ${env:USERNAME}).
-
+'
 {
   "type": "node",
   "request": "launch",
@@ -83,5 +83,6 @@ You can also reference environment variables through the ${env:Name} syntax (for
   "cwd": "${workspaceFolder}",
   "args": ["${env:USERNAME}"]
 }
+'
 
 
