@@ -3,9 +3,10 @@
 #include <Arduino.h>
 
 #include "WiFi.h"
+#include "env.h"
  
-const char* ssid     = "xxx";
-const char* password = "xxx";
+const char* ssid     = SSID_WIFI;
+const char* password = PASSWORD_WIFI;
  
 WiFiServer wifiServer(80);
  
