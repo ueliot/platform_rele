@@ -23,6 +23,15 @@ git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
 
 git push -u origin master
 
+>> for download remote and update our repo  <<
+
+git fetch   //download remote repo
+git merge   //merge local whit repo downloaded
+git add .
+git commit -m "update 1"
+git push
+
+
 ```
 
 
@@ -82,5 +91,7 @@ You can also reference environment variables through the ${env:Name} syntax (for
   "args": ["${env:USERNAME}"]
 }
 ```
+
+
 
 
