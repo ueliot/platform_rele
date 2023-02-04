@@ -68,3 +68,20 @@ extension en vscode:   code runner    : muchos scripts de diferentes lenguajes
 https://www.youtube.com/watch?v=aY1yzj7ewZM
 https://www.youtube.com/watch?v=WjddCoWTqi8   //Entorno virtual
 
+
+
+#  Referencia de variables en vscode
+https://code.visualstudio.com/docs/editor/variables-reference 
+
+You can also reference environment variables through the ${env:Name} syntax (for example, ${env:USERNAME}).
+
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Launch Program",
+  "program": "${workspaceFolder}/app.js",
+  "cwd": "${workspaceFolder}",
+  "args": ["${env:USERNAME}"]
+}
+
+
