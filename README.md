@@ -11,11 +11,8 @@ https://techtutorialsx.com/2018/05/25/esp32-socket-server-controlling-a-relay-re
 https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi/examples 
 
 
-
-
-
 Siempre usar al actualizar el repo:
-
+```
 git init
 
 git add .
@@ -26,6 +23,7 @@ git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
 
 git push -u origin master
 
+```
 
 
 https://dev.to/iamjonathanpumares/configura-tu-entorno-de-desarrollo-de-manera-profesional-con-python-y-django-335g 
