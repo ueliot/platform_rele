@@ -61,3 +61,10 @@ Con lo que inmediatamente se creará el entorno e instalarán los recursos neces
 ## conda activate venv-36
 y para volver a la configuración por defecto
 
+
+
+
+extension en vscode:   code runner    : muchos scripts de diferentes lenguajes
+https://www.youtube.com/watch?v=aY1yzj7ewZM
+https://www.youtube.com/watch?v=WjddCoWTqi8   //Entorno virtual
+
