@@ -1,17 +1,22 @@
-
+//=========================
+//SIMULATION ODAC CI: DA DC
+//=========================
 
 #include <Arduino.h>
-
 #include "WiFi.h"
 #include "env.h"
  
 const char* ssid     = SSID_WIFI;
 const char* password = PASSWORD_WIFI;
- 
+
+//Variables================= 
 WiFiServer wifiServer(80);
- 
 int relayPin = 5;
- 
+float randNumber1=0.0;
+float randNumber2=0.0;
+char buffer[20];
+
+ //PROCES COMAND===========================
 void processReceivedValue(char command){
  
   if(command == '1'){ digitalWrite(relayPin, HIGH); }
@@ -19,7 +24,8 @@ void processReceivedValue(char command){
  
    return;
 }
- 
+
+//===========SETUP========================
 void setup() {
  
   Serial.begin(115200);
@@ -42,6 +48,7 @@ void setup() {
   digitalWrite(relayPin, LOW);
 }
  
+//=============LOOP=============================
 void loop() {
  
   WiFiClient client = wifiServer.available();
@@ -49,8 +56,26 @@ void loop() {
   if (client) {
  
     while (client.connected()) {
- 
-      while (client.available()>0) {
+
+      //==========For Write in wifi==================
+       client.flush(); //2018-11-10 BB: Tr
+       buffer[0]='\0';  //Null character - clear buffer
+        randNumber1 = 3.0+random(50,500)/500.0;  // Issue not the same div x 500 than 500.0 (if float)
+        randNumber2 = 3.0+random(20,600)/600.0;
+        sprintf( buffer, "DA%4.3f DC%4.3f%s" ,randNumber1 ,randNumber2 ,"\n\r");  //MAGIC LOL
+        //sprintf( buffer, "%s %d %s %s %s", numero, randNumber1, "\t",numero,randNumber2,"\n\r" );
+        int lenbuffer=0;
+        lenbuffer = sizeof (buffer);
+        //lenbuffer = sizeof (buffer) / sizeof (buffer[0]);
+        //:write(const uint8_t *buf, size_t size)
+        client.write((uint8_t*)buffer, lenbuffer);
+        //client.flush(); //2018-11-10 BB: Tr
+        delay(10);
+        Serial.write(buffer);
+
+
+        //==========For Read wifi=================
+        while (client.available()>0) {   
         char c = client.read();
         processReceivedValue(c);
         Serial.write(c);
@@ -64,3 +89,5 @@ void loop() {
  
   }
 }
+
+
