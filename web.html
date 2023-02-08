@@ -1,0 +1,50 @@
+<!-- https://es.javascript.info/js -->
+<!-- https://lenguajejs.com/javascript/asincronia/async-await/ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name = "author" content = "André Buhart F1ATB">
+
+	<title>Web Serial Api</title>
+<script>	
+	var port;
+	var lineBuffer = '';
+	async function getReader() {
+		var port = await navigator.serial.requestPort({});
+		await port.open({ baudRate: 115000 });
+		const appendStream = new WritableStream({
+		  write(chunk) {
+			lineBuffer += chunk;
+			var lines = lineBuffer.split('\n\r');				
+			while (lines.length > 1) {
+			   var message=lines.shift();
+			   console.log(message);
+			   document.getElementById("info").innerHTML=message;
+			}
+			lineBuffer = lines.pop();
+		  }
+		});
+		port.readable
+		  .pipeThrough(new TextDecoderStream())
+		  .pipeTo(appendStream);	
+	}
+	function listSerial(){
+	if (port) {
+		  port.close();
+		  port = undefined;
+		}
+		else {
+		  console.log("Look for Serial Port")
+		  getReader();
+		}
+	}
+</script>
+</head>
+<body>
+<button onclick="listSerial();">Connect</button>
+<div id="info"></div>
+</body>
+</html>

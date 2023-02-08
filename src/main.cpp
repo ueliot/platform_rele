@@ -63,6 +63,10 @@ void loop() {
         randNumber1 = 3.0+random(50,500)/500.0;  // Issue not the same div x 500 than 500.0 (if float)
         randNumber2 = 3.0+random(20,600)/600.0;
         sprintf( buffer, "DA%4.3f DC%4.3f%s" ,randNumber1 ,randNumber2 ,"\n\r");  //MAGIC LOL
+        
+        //El retorno de carro (CR) y el salto de línea (LF) se denominan juntos CRLF.
+        //CR=13 (retorno de carro "\r")  LF=10(nueva linea "\n")
+
         //sprintf( buffer, "%s %d %s %s %s", numero, randNumber1, "\t",numero,randNumber2,"\n\r" );
         int lenbuffer=0;
         lenbuffer = sizeof (buffer);
@@ -70,7 +74,7 @@ void loop() {
         //:write(const uint8_t *buf, size_t size)
         client.write((uint8_t*)buffer, lenbuffer);
         //client.flush(); //2018-11-10 BB: Tr
-        delay(10);
+        delay(1000);
         Serial.write(buffer);
 
 
