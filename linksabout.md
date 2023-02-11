@@ -9,8 +9,7 @@
  * https://cpp.hotexamples.com/es/examples/-/WiFiClient/write/cpp-wificlient-write-method-examples.html
  * https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/
  * https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
- * 
- * 
+
 
 # writing in wifi and serial
  ```
@@ -105,31 +104,31 @@ main (int argc, char *argv[])
 
 # more links:
 
-https://www.geeksforgeeks.org/how-to-empty-a-char-array-in-c/
-https://forum.arduino.cc/t/sprintf-zero-padding-with-byte-issue/43221/17 
-https://www.ibm.com/docs/en/zos/2.1.0?topic=programs-sprintf-format-write-data 
+- https://www.geeksforgeeks.org/how-to-empty-a-char-array-in-c/
+- https://forum.arduino.cc/t/sprintf-zero-padding-with-byte-issue/43221/17 
+- https://www.ibm.com/docs/en/zos/2.1.0?topic=programs-sprintf-format-write-data 
 
 
 
 
-https://cloud.google.com/community/tutorials/embedded-c-getting-started 
-https://www.upesy.com/blogs/tutorials/how-to-connect-wifi-acces-point-with-esp32 
+- https://cloud.google.com/community/tutorials/embedded-c-getting-started 
+- https://www.upesy.com/blogs/tutorials/how-to-connect-wifi-acces-point-with-esp32 
 
 
 
 # ============GOOGLE COLAB=============
-https://towardsdatascience.com/7-ways-to-load-external-data-into-google-colab-7ba73e7d5fc7
-https://research.google.com/colaboratory/local-runtimes.html 
-http://arbennett.github.io/software,/machine-learning/2021/08/18/ml_infrastructure_for_eess_beginners.html 
-https://stackoverflow.com/questions/66769956/how-to-get-raw-ipynb-file-from-google-colab-using-sharing-url-command-line 
-https://colab.research.google.com/github/Shaam93/Building-a-classifer-with-Pytorch/blob/master/Uploading_Data_to_Google_Colab.ipynb
-https://anderfernandez.com/en/blog/how-to-code-gan-in-python/
-https://research.google.com/colaboratory/local-runtimes.html
+- https://towardsdatascience.com/7-ways-to-load-external-data-into-google-colab-7ba73e7d5fc7
+- https://research.google.com/colaboratory/local-runtimes.html 
+- http://arbennett.github.io/software,/machine-learning/2021/08/18/ml_infrastructure_for_eess_beginners.html 
+- https://stackoverflow.com/questions/66769956/how-to-get-raw-ipynb-file-from-google-colab-using-sharing-url-command-line 
+- https://colab.research.google.com/github/Shaam93/Building-a-classifer-with-Pytorch/blob/master/Uploading_Data_to_Google_Colab.ipynb
+- https://anderfernandez.com/en/blog/how-to-code-gan-in-python/
+- https://research.google.com/colaboratory/local-runtimes.html
 
 
-https://colab.research.google.com/drive/1Je1rk7olA9uTWWaqvvt4_gXf7yX1rTBm 
-https://colab.research.google.com/drive/1-Jb_E_nDuBGHIJ_psI95k-ukh-P_aly-
-https://dagshub.com/blog/reverse-engineering-google-colab/
+- https://colab.research.google.com/drive/1Je1rk7olA9uTWWaqvvt4_gXf7yX1rTBm 
+- https://colab.research.google.com/drive/1-Jb_E_nDuBGHIJ_psI95k-ukh-P_aly-
+- https://dagshub.com/blog/reverse-engineering-google-colab/
 
 
 
